@@ -16,8 +16,8 @@ export default function BannerCompra(props: BannerCompraProps) {
     const parcelamento = useParcelamento(produto.precoPromocional)
 
     return (
-        <div className="flex">
-            <div className="flex flex-col border-r border-zinc-500 pr-5">
+        <div className="flex max-md:flex-col">
+            <div className="flex flex-col border-r max-md:border-b max-md:border-r-0 border-zinc-500 max-md:pb-5 max-sm:pr-0 pr-5">
                 <div className="line-through text-zinc-400">de {Moeda.formatar(produto?.precoBase)}</div>
                 <div className="text-2xl font-semibold">
                     <span className="text-base text-zinc-300">por</span>{' '}
@@ -25,20 +25,20 @@ export default function BannerCompra(props: BannerCompraProps) {
                     <span className="text-base text-zinc-300">à vista</span>
                 </div>
             </div>
-            <div className="flex-1 flex flex-col text-2xl font-semibold text-zinc-400 pl-5">
+            <div className="flex-1 flex flex-col text-2xl font-semibold text-zinc-400 max-md:py-5 max-sm:pl-0 pl-5">
                 <span className="text-base text-zinc-300">{parcelamento.qtdeParcelas}x de</span>
                 {Moeda.formatar(parcelamento.valorParcela)}{' '}
             </div>
-            <div className="flex gap-2 items-center">
+            <div className="flex max-sm:flex-col gap-2 items-center">
                 <button
-                    className="flex-1 button bg-pink-600"
+                    className="flex-1 button bg-pink-600 max-sm:w-full max-sm:py-2"
                     onClick={() => adicionarItem(produto)}
                 >
                     <IconShoppingCart size={20} />
                     <span>Adicionar</span>
                 </button>
                 <button
-                    className="flex-1 button bg-violet-700"
+                    className="flex-1 button bg-violet-700 max-sm:w-full max-sm:py-2"
                     onClick={() => {
                         adicionarItem(produto)
                         router.push('/checkout/pagamento')

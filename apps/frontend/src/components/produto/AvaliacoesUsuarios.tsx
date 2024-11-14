@@ -33,8 +33,8 @@ export default function AvaliacoesUsuarios(props: AvaliacoesUsuariosProps) {
                         (198 Comentários)
                     </div>
                 </div>
-                <div className="flex-1 flex items-center bg-violet-dark/50 h-32 rounded-xl">
-                    <ul className="flex flex-col list-disc px-10 gap-1">
+                <div className="flex-1 flex items-center bg-violet-dark/50  h-32 rounded-xl">
+                    <ul className="flex flex-col list-disc px-10 max-sm:pl-7 gap-1 max-sm:text-sm">
                         <li>Desempenho excelente.</li>
                         <li>Custo benefício ótimo.</li>
                         <li>Gráfico dedicado.</li>
