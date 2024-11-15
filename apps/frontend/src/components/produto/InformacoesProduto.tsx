@@ -16,7 +16,7 @@ export default function InformacoesProduto(props: InformacoesProdutoProps) {
                     height={0}
                     width={0}
                     sizes='100vw'
-                    className="object-cover p-7 max-sm:p-0 w-full"
+                    className="object-contain  w-full"
                     alt="Imagem do Produto"
                 />
             </div>
