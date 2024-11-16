@@ -12,18 +12,18 @@ export default function AvaliacaoEspecializada(
         <div className="flex flex-col gap-5">
             <div className="flex flex-col gap-2">
                 <div className="flex items-center gap-2">
-                    <span className="text-3xl">🎯</span>
-                    <span className="text-2xl font-semibold">
+                    <span className="text-3xl max-md:text-sm">🎯</span>
+                    <span className="text-2xl max-md:text-sm font-semibold">
                         Avaliação Especializada
                     </span>
                 </div>
-                <p className="font-light text-zinc-300">
+                <p className="font-light text-zinc-300 max-md:text-xs text-justify">
                     *As avaliações que apresentamos não são desenvolvidos por
                     nós, mas sim por canais especializados em tecnologia, que
                     trazem uma análise aprofundada e imparcial dos produtos.
                 </p>
             </div>
-            <div className="relative lg:h-[500px]">
+            <div className="relative min-h-auto lg:h-[500px]">
                 <iframe
                     className="absolute inset-0 w-full h-full"
                     src={produto?.videoReview}

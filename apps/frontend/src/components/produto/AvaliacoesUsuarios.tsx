@@ -9,12 +9,12 @@ export default function AvaliacoesUsuarios(props: AvaliacoesUsuariosProps) {
     return (
         <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
-                <span className="text-2xl">⭐</span>
-                <span className="text-2xl font-semibold">
+                <span className="text-2xl max-md:text-sm">⭐</span>
+                <span className="text-2xl max-md:text-sm font-semibold">
                     Avaliações dos Usuários
                 </span>
             </div>
-            <p className="font-light text-zinc-300">
+            <p className="font-light text-zinc-300 text-justify max-md:text-xs">
                 O produto é elogiado por seu desempenho, qualidade de som e
                 praticidade. Os clientes destacam o bom custo-benefício, a
                 qualidade do microfone embutido e a facilidade de instalação.
@@ -25,11 +25,11 @@ export default function AvaliacoesUsuarios(props: AvaliacoesUsuariosProps) {
             </p>
             <div className="flex items-center gap-5 mt-5">
                 <div className="flex flex-col gap-2 items-center">
-                    <div className="text-7xl text-pink-600">
+                    <div className="text-7xl max-md:text-2xl text-pink-600">
                         {props.produto.nota}
                     </div>
                     <NotaReview nota={props.produto.nota} tamanho={18} />
-                    <div className="font-light text-sm text-zinc-300">
+                    <div className="font-light text-sm max-md:text-xs text-zinc-300">
                         (198 Comentários)
                     </div>
                 </div>
