@@ -7,7 +7,7 @@ export interface TotalCarrinhoProps {
     valorTotal: number
 }
 
-export default function TotalCarrinho(props: TotalCarrinhoProps) {
+export default function TotalCart(props: TotalCarrinhoProps) {
     return (
         <div className="flex max-md:flex-col justify-center md:justify-end items-center gap-7 max-md:gap-2 bg-violet-dark h-24 rounded-xl px-7 max-md:px-4 max-md:py-1">
             <div className="flex flex-col">
@@ -19,7 +19,7 @@ export default function TotalCarrinho(props: TotalCarrinhoProps) {
                     {Moeda.formatar(props.valorTotal ?? 0)}
                 </span>
             </div>
-            <Link href="/checkout/pagamento" className="button bg-indigo-700 max-md:w-full">
+            <Link href="/checkout/payment" className="button bg-indigo-700 max-md:w-full">
                 <IconShoppingCart size={20} />
                 <span>Continuar</span>
             </Link>

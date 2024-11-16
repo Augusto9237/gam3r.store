@@ -1,5 +1,5 @@
 'use client'
-import CabecalhoCheckout from '@/components/checkout/CabecalhoCheckout'
+import CabecalhoCheckout from '@/components/checkout/HeaderCheckout'
 import FormularioEntrega from '@/components/checkout/pagamento/FormularioEntrega'
 import ResumoPagamento from '@/components/checkout/pagamento/ResumoPagamento'
 import SelecaoFormaPagamento from '@/components/checkout/pagamento/SelecaoFormaPagamento'

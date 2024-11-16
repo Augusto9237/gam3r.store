@@ -4,7 +4,7 @@ interface CabecalhoCheckoutProps {
     passo: 'carrinho' | 'pagamento'
 }
 
-export default function CabecalhoCheckout(props: CabecalhoCheckoutProps) {
+export default function HeaderCheckout(props: CabecalhoCheckoutProps) {
     function corSelecionada(passo: string) {
         return props.passo === passo ? 'text-pink-500' : 'text-zinc-400'
     }
@@ -15,7 +15,7 @@ export default function CabecalhoCheckout(props: CabecalhoCheckoutProps) {
             : 'bg-zinc-400 text-black'
     }
 
-    function renderizarItem(
+    function renderItem(
         passo: 'carrinho' | 'pagamento',
         indice: number,
         titulo: string,
@@ -45,9 +45,9 @@ export default function CabecalhoCheckout(props: CabecalhoCheckoutProps) {
 
     return (
         <div className="flex justify-center items-center gap-6 h-20 select-none">
-            {renderizarItem('carrinho', 1, 'Carrinho', '/checkout/carrinho')}
+            {renderItem('carrinho', 1, 'Carrinho', '/checkout/carrinho')}
             <div className="bg-zinc-300 h-px w-12"></div>
-            {renderizarItem('pagamento', 2, 'Pagamento', '/checkout/pagamento')}
+            {renderItem('pagamento', 2, 'Pagamento', '/checkout/pagamento')}
         </div>
     )
 }
