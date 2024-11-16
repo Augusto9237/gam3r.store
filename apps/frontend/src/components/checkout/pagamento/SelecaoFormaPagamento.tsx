@@ -13,7 +13,7 @@ export default function SelecaoFormaPagamento(
         const selecionado = props.formaPagamento === tipo
         return (
             <button
-                className="flex items-center gap-3 bg-violet-dark rounded-lg h-12 px-7"
+                className="flex items-center gap-3 bg-violet-dark rounded-lg h-12 px-7 max-md:px-5"
                 onClick={() => props.formaPagamentoMudou?.(tipo)}
             >
                 <span
@@ -29,10 +29,10 @@ export default function SelecaoFormaPagamento(
 
     return (
         <div className={`flex flex-col gap-3 ${props.className ?? ''}`}>
-            <span className="px-7 pb-2 text-xl font-bold text-white/70">
+            <span className="px-7 max-md:px-5 pb-2 text-xl max-md:text-base font-bold text-white/70">
                 Forma de Pagamento
             </span>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col gap-3 max-md:text-xs">
                 {renderizarItem('Pagamento no PIX', FormaPagamento.PIX)}
                 {renderizarItem('Boleto Bancário', FormaPagamento.BOLETO)}
                 {renderizarItem('Cartão de Crédito', FormaPagamento.CARTAO)}

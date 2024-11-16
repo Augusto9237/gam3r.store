@@ -17,7 +17,7 @@ export default function FormularioEntrega(props: FormularioEntregaProps) {
 
     return (
         <div className={`flex flex-col gap-3 ${props.className ?? ''}`}>
-            <span className="px-7 pb-2 text-xl font-bold text-white/70">
+            <span className="px-7 max-md:px-5 pb-2 text-xl max-md:text-base font-bold text-white/70">
                 Dados da Entrega
             </span>
             <div className="flex flex-col gap-5 bg-violet-dark/50 rounded-xl p-6">
@@ -25,48 +25,48 @@ export default function FormularioEntrega(props: FormularioEntregaProps) {
                     placeholder="Nome Completo"
                     value={entrega.nome}
                     onChange={alterarAtributo('nome')}
-                    className="input"
+                    className="input max-md:text-xs"
                 />
-                <div className="flex gap-5">
+                <div className="flex max-md:flex-col gap-5">
                     <input
                         placeholder="E-mail"
                         value={entrega.email}
                         onChange={alterarAtributo('email')}
-                        className="input flex-1"
+                        className="input flex-1 max-md:text-xs"
                     />
                     <input
                         placeholder="CPF"
                         value={entrega.cpf}
                         onChange={alterarAtributo('cpf')}
-                        className="input flex-1"
+                        className="input flex-1 max-md:text-xs"
                     />
                 </div>
-                <div className="flex gap-5">
+                <div className="flex max-md:flex-col gap-5">
                     <input
                         placeholder="Logradouro"
                         value={entrega.logradouro}
                         onChange={alterarAtributo('logradouro')}
-                        className="input flex-1"
+                        className="input flex-1 max-md:text-xs"
                     />
                     <input
                         placeholder="Complemento"
                         value={entrega.complemento}
                         onChange={alterarAtributo('complemento')}
-                        className="input"
+                        className="input max-md:text-xs"
                     />
                 </div>
-                <div className="flex gap-5">
+                <div className="flex max-md:flex-col gap-5">
                     <input
                         placeholder="Cidade"
                         value={entrega.cidade}
                         onChange={alterarAtributo('cidade')}
-                        className="input flex-1"
+                        className="input flex-1 max-md:text-xs"
                     />
                     <input
                         placeholder="Estado"
                         value={entrega.estado}
                         onChange={alterarAtributo('estado')}
-                        className="input flex-1"
+                        className="input flex-1 max-md:text-xs"
                     />
                 </div>
             </div>

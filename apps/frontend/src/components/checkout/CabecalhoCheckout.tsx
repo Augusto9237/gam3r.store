@@ -38,7 +38,7 @@ export default function CabecalhoCheckout(props: CabecalhoCheckoutProps) {
                 >
                     {indice}
                 </span>
-                <span>{titulo}</span>
+                <span className='max-md:text-xs'>{titulo}</span>
             </Link>
         )
     }
