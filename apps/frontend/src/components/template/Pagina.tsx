@@ -1,6 +1,7 @@
 import Header from './Header'
 import Rodape from './Rodape'
 
+
 export interface PaginaProps {
     children: any
     className?: string
@@ -10,6 +11,7 @@ export interface PaginaProps {
 
 export default function Pagina(props: PaginaProps) {
     return (
+    
         <div
             className="flex flex-col min-h-screen w-full"
             style={{ background: 'radial-gradient(50% 50% at 50% 50%, #2d0064 0%, #0d001c 100%)' }}

@@ -8,6 +8,7 @@ import {
 } from '@gstore/core'
 import { createContext, useEffect, useState } from 'react'
 import useLocalStorage from '../hooks/useLocalStorage'
+import { toast } from 'react-hot-toast';
 
 export interface ContextoCarrinhoProps {
     itens: ItemCarrinho[]
@@ -29,10 +30,12 @@ export function ProvedorCarrinho(props: any) {
 
     function adicionarItem(produto: Produto) {
         alterarCarrinho(carrinho.adicionarItem(produto))
+        toast.success(`${produto.nome} adicionado ao carrinho!`)
     }
 
     function removerItem(produto: Produto) {
         alterarCarrinho(carrinho.removerItem(produto))
+        toast.success(`${produto.nome} adicionado ao carrinho!`)
     }
 
     function removerProduto(produto: Produto) {
