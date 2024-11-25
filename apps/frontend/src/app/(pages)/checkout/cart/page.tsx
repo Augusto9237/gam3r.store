@@ -1,8 +1,8 @@
 'use client'
 import HeaderCheckout from "@/components/checkout/HeaderCheckout"
-import CarrinhoItem from "@/components/checkout/carrinho/CarrinhoItem"
-import CarrinhoVazio from "@/components/checkout/carrinho/CarrinhoVazio"
-import TotalCart from "@/components/checkout/carrinho/TotalCart"
+import CartItem from "@/components/checkout/cart/CartItem"
+import EmptyCart from "@/components/checkout/cart/EmptyCart"
+import TotalCart from "@/components/checkout/cart/TotalCart"
 import useCarrinho from "@/data/hooks/useCarrinho"
 
 export default function Page() {
@@ -19,14 +19,14 @@ export default function Page() {
             <div className="flex flex-col gap-5 container">
                 <HeaderCheckout passo="carrinho" />
                 <div className="flex flex-col gap-4">
-                    {itens.length === 0 && <CarrinhoVazio />}
+                    {itens.length === 0 && <EmptyCart/>}
                     {itens.map((item: any) => (
-                        <CarrinhoItem
+                        <CartItem
                             key={item.produto.id}
                             item={item}
-                            adicionarItem={() => adicionarItem(item.produto)}
-                            removerItem={() => removerItem(item.produto)}
-                            removerProduto={() => removerProduto(item.produto)}
+                            addItem={() => adicionarItem(item.produto)}
+                            removeItem={() => removerItem(item.produto)}
+                            removeProduct={() => removerProduto(item.produto)}
                         />
                     ))}
                 </div>

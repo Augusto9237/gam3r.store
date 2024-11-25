@@ -3,14 +3,14 @@ import { Moeda, ItemCarrinho as ItemCarrinhoModel } from '@gstore/core'
 import Image from 'next/image'
 import useParcelamento from '@/data/hooks/useParcelamento'
 
-export interface CarrinhoItemProps {
+export interface CartItemProps {
     item: ItemCarrinhoModel
-    adicionarItem: () => void
-    removerItem: () => void
-    removerProduto: () => void
+    addItem: () => void
+    removeItem: () => void
+    removeProduct: () => void
 }
 
-export default function CarrinhoItem(props: CarrinhoItemProps) {
+export default function CartItem(props: CartItemProps) {
     const { item } = props
     const { produto, quantidade } = item
     const parcelamento = useParcelamento(produto.precoPromocional)
@@ -40,7 +40,7 @@ export default function CarrinhoItem(props: CarrinhoItemProps) {
                         <button
                             disabled={quantidade === 1}
                             className={`${quantidade === 1 && 'text-zinc-500  cursor-not-allowed'} px-2 py-0.5`}
-                            onClick={props.removerItem}
+                            onClick={props.removeItem}
                         >
                             <IconMinus size={15} />
                         </button>
@@ -49,14 +49,14 @@ export default function CarrinhoItem(props: CarrinhoItemProps) {
                         </span>
                         <button
                             className="px-2 py-0.5 text-emerald-500"
-                            onClick={props.adicionarItem}
+                            onClick={props.addItem}
                         >
                             <IconPlus size={15} />
                         </button>
                     </div>
                     <button
                         className="flex items-center gap-1 text-pink-600 select-none"
-                        onClick={props.removerProduto}
+                        onClick={props.removeProduct}
                     >
                         <IconTrash size={12} />
                         <span className="text-sm max-sm:text-xs">Remover</span>
@@ -69,7 +69,7 @@ export default function CarrinhoItem(props: CarrinhoItemProps) {
                     <button
                         disabled={quantidade === 1}
                         className={`${quantidade === 1 && 'text-zinc-500 cursor-not-allowed'} px-2 py-0.5`}
-                        onClick={props.removerItem}
+                        onClick={props.removeItem}
                     >
                         <IconMinus size={15} />
                     </button>
@@ -78,14 +78,14 @@ export default function CarrinhoItem(props: CarrinhoItemProps) {
                     </span>
                     <button
                         className="px-2 py-0.5 text-emerald-500"
-                        onClick={props.adicionarItem}
+                        onClick={props.addItem}
                     >
                         <IconPlus size={15} />
                     </button>
                 </div>
                 <button
                     className="flex items-center gap-1 text-pink-600 select-none"
-                    onClick={props.removerProduto}
+                    onClick={props.removeProduct}
                 >
                     <IconTrash size={20} />
                     <span className="text-sm">Remover</span>

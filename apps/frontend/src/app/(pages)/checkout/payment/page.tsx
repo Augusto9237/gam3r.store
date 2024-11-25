@@ -1,8 +1,8 @@
 'use client'
 import CabecalhoCheckout from '@/components/checkout/HeaderCheckout'
-import FormularioEntrega from '@/components/checkout/pagamento/FormularioEntrega'
-import ResumoPagamento from '@/components/checkout/pagamento/ResumoPagamento'
-import SelecaoFormaPagamento from '@/components/checkout/pagamento/SelecaoFormaPagamento'
+import FormularioEntrega from '@/components/checkout/payment/FormularioEntrega'
+import ResumoPagamento from '@/components/checkout/payment/ResumoPagamento'
+import SelecaoFormaPagamento from '@/components/checkout/payment/SelecaoFormaPagamento'
 import useCarrinho from '@/data/hooks/useCarrinho'
 import usePagamento from '@/data/hooks/usePagamento'
 

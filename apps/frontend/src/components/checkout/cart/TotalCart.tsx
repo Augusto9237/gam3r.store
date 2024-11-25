@@ -2,12 +2,12 @@ import { IconShoppingCart } from '@tabler/icons-react'
 import { Moeda } from '@gstore/core'
 import Link from 'next/link'
 
-export interface TotalCarrinhoProps {
+export interface TotalCartProps {
     qtdeItens: number
     valorTotal: number
 }
 
-export default function TotalCart(props: TotalCarrinhoProps) {
+export default function TotalCart(props: TotalCartProps) {
     return (
         <div className="flex max-md:flex-col justify-center md:justify-end items-center gap-7 max-md:gap-2 bg-violet-dark h-24 rounded-xl px-7 max-md:px-4 max-md:py-1">
             <div className="flex flex-col">
