@@ -3,28 +3,28 @@ import { createContext, useCallback, useEffect, useState } from 'react'
 import { FiltrarProdutos, Produto } from '@gstore/core'
 import useAPI from '../hooks/useAPI'
 
-export interface ContextoProdutosProps {
+export interface ContextProductsProps {
     produtos: Produto[]
     pesquisa: string
     setPesquisa: (pesquisa: string) => void
     produtoPorId: (id: number) => Produto | null
 }
 
-const ContextoProdutos = createContext<ContextoProdutosProps>({} as any)
+const ContextoProdutos = createContext<ContextProductsProps>({} as any)
 
 export function ProvedorProdutos(props: any) {
     const { httpGet } = useAPI()
     const [pesquisa, setPesquisa] = useState<string>('')
     const [produtos, setProdutos] = useState<Produto[]>([])
 
-    const carregarProdutos = useCallback(async () => {
-        const produtos = await httpGet('/produtos')
-        setProdutos(produtos ?? [])
+    const loadProducts = useCallback(async () => {
+        const products = await httpGet('/produtos')
+        setProdutos(products ?? [])
     }, [httpGet])
 
     useEffect(() => {
-        carregarProdutos()
-    }, [carregarProdutos])
+        loadProducts()
+    }, [loadProducts])
 
     return (
         <ContextoProdutos.Provider
