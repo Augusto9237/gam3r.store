@@ -34,12 +34,12 @@ export function ProvedorCarrinho(props: any) {
     }
 
     function removerItem(produto: Produto) {
-        alterarCarrinho(carrinho.removerItem(produto))
-        toast.success(`${produto.nome} adicionado ao carrinho!`)
+        alterarCarrinho(carrinho.removerItem(produto))       
     }
 
     function removerProduto(produto: Produto) {
         alterarCarrinho(carrinho.removerProduto(produto))
+        toast.error(`${produto.nome} removido do carrinho!`)
     }
 
     function limparCarrinho() {
